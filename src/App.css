@@ -1,0 +1,694 @@
+:root{
+  --primary-color: #f6f6f6;
+  --secondary-color: #ededed;
+  --tertiary-color: #000000;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.App{
+  width: 500px;
+  height: 500px;
+  background-color: --primary-color;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.content{
+  height: 90%;
+  background-color: #fcfcfc;
+  border: 1px solid #ededed;
+}
+
+.bottom-nav-bar{
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ededed;
+}
+
+.chronometer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.chronometer__title{
+  color: #06c3ff;
+  margin-top: 15px;
+}
+
+.chronometer__circular-progress__container{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.chronometer__circular-progress__container__timer-label{
+  position: absolute;
+  font-size: 30px;
+  color: #06c3ff;
+}
+
+.chronometer__btns-container{
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chronometer__btns-container__btn--secondary{
+  background-color: white;
+  color: #06c3ff;
+  border: 1px solid #06c3ff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chronometer__btns-container__btn--secondary-hidden{
+  background-color: white;
+  color: #06c3ff;
+  border: 1px solid #06c3ff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.chronometer__btns-container__btn--primary{
+ background-color: #06c3ff;
+ height: 50px;
+ width: 50px;
+ border-radius: 100%;
+ border: none;
+ color: white;
+ margin: 0px 5px;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.clock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clock__title{
+  color: #06c3ff;
+  margin-top: 15px;
+}
+
+.clock__container{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.clock__container__time-label{
+  position: absolute;
+  font-size: 40px;
+  color: #06c3ff;
+}
+
+.timer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timer__title{
+  color: #06c3ff;
+  margin-top: 15px;
+}
+
+.timer__circular-progress__container{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.timer__circular-progress__container__timer-label{
+  position: absolute;
+  font-size: 30px;
+  color: #06c3ff;
+}
+
+.timer__btns-container{
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.timer__btns-container__btn--secondary{
+  background-color: white;
+  color: #06c3ff;
+  border: 1px solid #06c3ff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.timer__btns-container__btn--secondary-hidden{
+  background-color: white;
+  color: #06c3ff;
+  border: 1px solid #06c3ff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.timer__btns-container__btn--primary{
+  background-color: #06c3ff;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: none;
+  color: white;
+  margin: 0px 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__circular-progress__container__settings-btn{
+position: absolute;
+right: 25px;
+top: 25px;
+border-radius: 100%;
+border: none;
+cursor: pointer;
+background-color: #06c3ff;
+color: white;
+height: 35px;
+width: 35px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.timer__circular-progress__container__settings-btn--hidden{
+  position: absolute;
+right: 25px;
+top: 25px;
+border-radius: 100%;
+border: none;
+cursor: pointer;
+background-color: #06c3ff;
+color: white;
+height: 35px;
+width: 35px;
+display: flex;
+align-items: center;
+justify-content: center;
+visibility: hidden;
+}
+
+.timer__modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__modal__container{
+position: relative;
+background-color: #f6f6f6;
+height: 100px;
+width: 300px;
+border-radius: 15px;
+margin-bottom: 30px;
+}
+
+.timer__modal__container__close-btn{
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  background-color: transparent;
+  color: #06c3ff;
+  border: none;
+  cursor: pointer;
+}
+
+.timer__modal__container__title{
+  color: #06c3ff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.timer__modal__container__controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.timer__modal__container__controls__btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  border:none;
+  border-radius: 15px;
+  background-color: #06c3ff;
+  color: white;
+  cursor: pointer;
+}
+
+.timer__modal__container__controls__span{
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #06c3ff;
+  border-radius: 15px;
+  border: 1px solid #06c3ff;
+  padding: 5px 10px;
+}
+
+.alarm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.alarm__title{
+  color: #06c3ff;
+  margin-top: 15px;
+}
+
+.alarm__add-btn{
+  background-color: #06c3ff;
+  color: white;
+  border: none;
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 15px;
+  top: 55px;
+  cursor: pointer;
+}
+
+.alarm__scrollable-container{
+  width: 80%;
+  height: 335px;
+  margin-top: 50px;
+  overflow-y: auto;
+  
+}
+
+.alarm__add-modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alarm__add-modal__container{
+position: relative;
+background-color: #f6f6f6;
+height: 100px;
+width: 300px;
+border-radius: 15px;
+margin-bottom: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.alarm__add-modal__container__close-btn{
+  position: absolute;
+  right: -25px;
+  top: -20px;
+  cursor: pointer;
+  color: #06c3ff;
+  background-color: transparent;
+  border: none;
+}
+
+.alarm__add-modal__container__span{
+width: 150px;
+border: 1px solid #06c3ff;
+border-radius: 15px;
+height: 25px;
+outline: none;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #06c3ff;
+}
+
+.alarm__add-modal__container__btn{
+margin-left: 5px;
+margin-right: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #06c3ff;
+border: none;
+height: 30px;
+width: 30px;
+color: white;
+border-radius: 15px;
+cursor: pointer;
+}
+
+.alarm__add-modal__container__submit-btn{
+  position: absolute;
+  color: white;
+  background-color: #06c3ff;
+  width: 50px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 15px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.alarm-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border: 1px solid #06c3ff;
+  padding: 0px 5px;
+  border-radius: 25px;
+  margin: 10px 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.alarm-item__time{
+  color: #06c3ff;
+  margin-left: 5px;
+}
+
+.alarm-item__switch{
+margin-right: 15px;
+}
+
+.alarm-item__menu-btn{
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  right: 5px;
+  color: #06c3ff;
+}
+
+.alarm-item__popover{
+  width: 40px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+.alarm-item__popover__delete-btn{
+margin-top: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #06c3ff;
+color: white;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.alarm-item__popover__edit-btn{
+  margin-top: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #06c3ff;
+color: white;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.alarm-item__edit-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alarm-item__edit-modal__container{
+  background-color: #f6f6f6;
+  height: 100px;
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.alarm-item__edit-modal__container__close-btn{
+  position: absolute;
+  right: -25px;
+  top: -20px;
+  cursor: pointer;
+  color: #06c3ff;
+  background-color: transparent;
+  border: none;
+}
+
+.alarm-item__edit-modal__container__span{
+  width: 150px;
+  border: 1px solid #06c3ff;
+  border-radius: 15px;
+  height: 25px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #06c3ff;
+}
+
+.alarm-item__edit-modal__container__submit-btn{
+  position: absolute;
+  color: white;
+  background-color: #06c3ff;
+  width: 50px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 15px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.alarm-item__edit-modal__container__increment-btn{
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #06c3ff;
+  border: none;
+  height: 30px;
+  width: 30px;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.alarm-item__edit-modal__container__decrement-btn{
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #06c3ff;
+  border: none;
+  height: 30px;
+  width: 30px;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.alarm-item__snooze-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alarm-item__snooze-modal__container{
+  background-color: #f6f6f6;
+  height: 100px;
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.alarm-item__snooze-modal__container__label{
+  color: #06c3ff;
+  margin-bottom: 15px;
+}
+
+.alarm-item__snooze-modal__container__input{
+  width: 250px;
+  border: 1px solid #06c3ff;
+  border-radius: 15px;
+  height: 25px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #06c3ff;
+}
+
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 599px) {
+  .App{
+    height: 95vh;
+    width: 95vw;
+  }
+
+  .alarm__scrollable-container{
+    height: 550px;
+    width: 95%;
+    margin-top: 70px;
+  }
+
+  .alarm-item{
+    width: 95%;
+    height: 50px;
+  }
+
+  .chronometer__circular-progress__container{
+    height: 450px;
+    margin-top: 70px;
+  }
+
+  .timer__circular-progress__container{
+    height: 450px;
+    margin-top: 70px;
+  }
+
+  .timer__btns-container__btn--primary{
+   height: 70px;
+   width: 70px;
+  }
+
+  .timer__btns-container__btn--secondary{
+    height: 50px;
+    width: 50px;
+  }
+
+  .chronometer__btns-container__btn--primary{
+    height: 70px;
+    width: 70px;
+  }
+
+  .chronometer__btns-container__btn--secondary{
+    height: 50px;
+    width: 50px;
+  }
+
+  .clock__container{
+   height: 450px;
+   margin-top: 70px;
+  }
+
+  .clock__container__time-label{
+    font-size: 50px;
+  }
+
+  .alarm__add-btn{
+    width: 50px;
+    height: 50px;
+  }
+
+  .alarm__title{
+    font-size: 30px;
+  }
+
+  .clock__title{
+    font-size: 30px;
+  }
+
+  .timer__title{
+    font-size: 30px;
+  }
+
+  .chronometer__title{
+    font-size: 30px;
+  }
+  
+}
+
+
+
+
